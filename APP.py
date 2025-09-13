@@ -1,5 +1,5 @@
 import random, string
-def pswd_gnrtor(lenght):
+def pswd_gnrtor(lenght= 25):
     charac_pswrd = string.ascii_letters + string.digits + string.punctuation +string.ascii_uppercase
     pswd = ""
 
