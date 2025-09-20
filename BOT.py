@@ -145,6 +145,11 @@ async def duck(ctx):
     el programa llama a la función get_duck_image_url'''
     image_url = APP.get_duck_image_url()
     await ctx.send(image_url)
-
+@bot.command('dog')
+async def dog(ctx):
+    '''Una vez que llamamos al comando dog, 
+    el programa llama a la función get_dog_image_url'''
+    image_url = APP.get_dog_image_url()
+    await ctx.send(image_url)
 # Ejecución del bot
 bot.run(token)
