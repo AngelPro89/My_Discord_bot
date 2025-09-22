@@ -1,5 +1,5 @@
 import discord
-import os, APP
+import os, APP,eco
 import asyncio
 import yt_dlp as youtube_dl
 from discord.ext import commands
@@ -151,5 +151,10 @@ async def dog(ctx):
     el programa llama a la función get_dog_image_url'''
     image_url = APP.get_dog_image_url()
     await ctx.send(image_url)
+@bot.command('ecotips')
+async def ecotips(ctx):
+    tips = eco.tag_recycler()
+    await ctx.send(embed=tips)
+
 # Ejecución del bot
 bot.run(token)
